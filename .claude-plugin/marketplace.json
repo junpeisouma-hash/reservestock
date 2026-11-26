@@ -1,13 +1,17 @@
 {
   "name": "reservestock",
-  "owner": { "name": "リザスト" },
-  "metadata": { "description": "Reservestock 操作プラグイン" },
+  "owner": {
+    "name": "リザスト"
+  },
+  "metadata": {
+    "description": "Reservestock 操作プラグイン"
+  },
   "plugins": [
     {
       "name": "reservestock",
       "source": "./reservestock",
       "description": "Reservestock 操作プラグイン：リザストのAPIで、メルマガ・イベント・個別予約・顧客などを Claude Code から参照・操作する",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }

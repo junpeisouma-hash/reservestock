@@ -1,6 +1,6 @@
 {
   "name": "reservestock",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reservestock 操作プラグイン：リザストのAPIで、メルマガ・イベント・個別予約・顧客などを Claude Code から参照・操作する",
   "author": {
     "name": "リザスト"
@@ -20,11 +20,7 @@
       "required": true
     }
   },
-  "network": {
-    "hosts": [
-      "www.reservestock.jp"
-    ]
-  },
   "license": "MIT",
-  "icon": "assets/icon.png"
+  "icon": "assets/icon.png",
+  "privacyPolicyUrl": "https://www.reservestock.jp/service_provider_sessions/provacy_policy"
 }

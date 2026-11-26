@@ -5,7 +5,6 @@ Claude Code から、リザストのメルマガ・イベント・個別予約�
 ## 必要なもの
 
 - Claude Code（CLI またはデスクトップアプリ）
-- Node.js 18 以上（`node --version` で確認）
 - リザストの API実行キー（管理画面「API設定」 https://www.reservestock.jp/api_config で発行）
   - 参照だけなら「参照専用」、作成・更新もさせるなら必要な機能に「変更・実行」を付けたキーにしてください。
 
@@ -38,14 +37,13 @@ Claude Code で次を実行します。
 | ファイル | 役割 |
 |---|---|
 | `.claude-plugin/plugin.json` | プラグイン定義（APIキーの入力欄） |
-| `.mcp.json` | MCPサーバーの起動設定 |
-| `server/index.mjs` | MCPサーバー本体（依存パッケージなし） |
+| `.mcp.json` | リザストのMCP窓口（https://www.reservestock.jp/api/mcp）への接続設定 |
 | `skills/reservestock/SKILL.md` | Claude への操作手順 |
 
-MCPツール:
+MCPツール（リザスト側の窓口が提供）:
 
-- `reference` … APIリファレンス（https://www.reservestock.jp/api_config/api_reference_for_ai?format=md）を検索
+- `reference` … APIリファレンス（AIエージェント用）を検索
 - `api_get` … GET で参照
 - `api_post` … POST で作成・更新・削除・配信
 
-環境変数 `RESERVESTOCK_BASE_URL` で接続先を変えられます（既定 `https://www.reservestock.jp/`）。
+このプラグイン自体はプログラムを含みません。APIキーは Authorization ヘッダーでリザストの窓口に送られ、窓口はキーの権限・月間回数の範囲で既存のAPIを呼びます。

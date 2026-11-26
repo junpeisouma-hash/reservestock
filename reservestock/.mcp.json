@@ -1,10 +1,10 @@
 {
   "mcpServers": {
     "reservestock": {
-      "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/server/index.mjs"],
-      "env": {
-        "RESERVESTOCK_API_KEY": "${user_config.api_key}"
+      "type": "http",
+      "url": "https://www.reservestock.jp/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}"
       }
     }
   }
